@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurang Solstrålen - Boka Bord</title>
+</head>
+<body>
+
+    <!-- Navigationsmeny -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="meny.html">Meny</a></li>
+            <li><a href="om-oss.html">Om Oss</a></li>
+            <li><a href="boka-bord.html">Boka Bord</a></li>
+        </ul>
+    </nav>
+
+    <!-- Bokningsformulär -->
+    <h1>Boka Bord</h1>
+    <form action="skicka-bokning.html" method="post">
+        <label for="namn">Namn:</label>
+        <input type="text" id="namn" name="namn" required><br><br>
+
+        <label for="antal-personer">Antal personer:</label>
+        <input type="number" id="antal-personer" name="antal-personer" required><br><br>
+
+        <label for="datum">Datum:</label>
+        <input type="date" id="datum" name="datum" required><br><br>
+
+        <label for="tid">Tid:</label>
+        <input type="time" id="tid" name="tid" required><br><br>
+
+        <label for="meddelande">Meddelande:</label>
+        <textarea id="meddelande" name="meddelande"></textarea><br><br>
+
+        <input type="submit" value="Skicka Bokningsförfrågan">
+        <input type="reset" value="Återställ">
+    </form>
+
+</body>
+</html>
