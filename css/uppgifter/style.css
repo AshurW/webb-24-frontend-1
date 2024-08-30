@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    color: orange;
+    font-size: 2rem;
+}
+
+body {
+    background-color: lightcoral;
+}
+
+p.highlight {
+    background-color: green;
+}
+
+#header {
+    color: aliceblue;
+    font-size: 10px;
+}
+
+.container .highlight {
+    background-color: aquamarine;
+}

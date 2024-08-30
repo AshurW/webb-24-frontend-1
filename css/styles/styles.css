@@ -1,0 +1,50 @@
+p {
+    color: red;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.green {
+    background-color: green;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    width: 25px;
+    border: 10px solid orange;
+    border-radius: 50%;
+    font-family: "Sevillana", sans-serif;
+    transform: rotate(45deg);
+}
+
+.blue>.green {
+    color: green;
+    background-color: red;
+    font-size: 45px;
+}
+
+
+#p1 {
+    background-color: blue;
+}  */
+
+a, p {
+    background-color: aqua;
+}
+
+* {
+    background-color: aqua;
+}
+
+a[target="_self"] {
+    text-decoration: none;
+}
+
+p:hover {
+    background-color:  red;
+}
+
+li:nth-child(even) {
+    background-color: lightgray;
+}
