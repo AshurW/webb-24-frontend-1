@@ -1,0 +1,52 @@
+/* Hover Pseudo Class */
+.demo-button {
+    padding: 10px 20px;
+    background-color: lightblue;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .demo-button:hover {
+    background-color: purple;
+    color: white;
+  }
+  
+  /* Active Pseudo Class */
+  .demo-button:active {
+    background-color: red;
+  }
+  
+  /* Focus Pseudo Class */
+  .demo-input {
+    padding: 5px;
+    border: 2px solid gray;
+  }
+  
+  .demo-input:focus {
+    border: 10px solid green;
+  }
+  
+  /* First Child Pseudo Class */
+  .demo-list li:first-child {
+    color: blue;
+    font-weight: bold;
+  }
+  
+  /* Last Child Pseudo Class */
+  .demo-list li:last-child {
+    color: red;
+    font-style: italic;
+  }
+  
+  /* nth-child Pseudo Class */
+  .demo-list li:nth-child(2) {
+    background-color: lightgray;
+  }
+  
+  /* Not Pseudo Class */
+  p:not(.special) {
+    background-color: yellow;
+  }
+  
+  /* nth-of
+  

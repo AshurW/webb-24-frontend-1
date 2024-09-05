@@ -1,0 +1,52 @@
+/* ::before och ::after Pseudoelement */
+.styled-button {
+    position: relative;
+    padding: 10px 20px;
+    background-color: lightblue;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .styled-button::before,
+  .styled-button::after {
+    content: "—";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+  }
+  
+  .styled-button::before {
+    left: -20px;
+  }
+  
+  .styled-button::after {
+    right: -20px;
+  }
+  
+  /* ::first-line och ::first-letter Pseudoelement */
+  .demo-paragraph::first-line {
+    font-size: 1.5rem;
+    color: darkblue;
+    font-weight: bold;
+  }
+  
+  .demo-paragraph::first-letter {
+    font-size: 2rem;
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* ::selection Pseudoelement */
+  ::selection {
+    background-color: yellow;
+    color: black;
+  }
+  
+  /* ::placeholder Pseudoelement */
+  .demo-input::placeholder {
+    color: gray;
+    font-style: italic;
+  }
+  
