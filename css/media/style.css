@@ -1,0 +1,47 @@
+/* Extra small devices (phones, 500px and down) */
+@media only screen and (max-width: 500px) {
+    body {
+        background-color: orange;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    body {
+        background-color: gray;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    body {
+        background-color: red;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    body {
+        background-color: black;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    body {
+        background-color: green;
+    }
+}
+
+
+@media only screen and (orientation: portrait) {
+    body {
+        background-color: purple;
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    body {
+        background-color: olive;
+    }
+}

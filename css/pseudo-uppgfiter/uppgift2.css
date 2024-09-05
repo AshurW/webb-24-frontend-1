@@ -1,0 +1,31 @@
+/* Stilsättning för section */
+.image-container {
+    position: relative; /* Behållarens position för pseudo-elementet */
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1; /* Se till att innehållet är över pseudo-elementet */
+    background-color: #f0f0f0; /* Fallback-bakgrundsfärg om bilden inte laddas */
+}
+
+.image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Placera bakgrundsbilden bakom innehållet */
+    background-image: url('image.jpg'); /* Sätt din bakgrundsbild här */
+    background-repeat: no-repeat; /* Bilden ska inte upprepas */
+    background-size: cover; /* Bakgrundsbilden täcker hela elementet */
+    background-position: center; /* Placera bakgrundsbilden centrerat */
+    opacity: 0.8; /* Gör bakgrundsbilden lite genomskinlig */
+}
+
+h1 {
+    color: #333;
+    font-size: 2rem;
+}
