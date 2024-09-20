@@ -202,3 +202,31 @@
 
 
 
+
+
+// let i = 0
+// while (i < 10) {
+// 	console.log("hej")
+//     // i = i + 1
+// 	i++
+// }
+
+// for (let i = 0; i < 11; i++) {
+// 	if(i === 8) {
+// 		break;
+// 	}
+// 	console.log(i)
+// }
+
+// for (let i = 0; i < 11; i++) {
+// 	if(i === 8) {
+// 		continue;
+// 	}
+// 	console.log(i)
+// }
+
+const myArray = [1, 2, "ashur", 4, 5, 6]
+
+myArray.forEach(function (item) {
+    console.log(item)
+})
