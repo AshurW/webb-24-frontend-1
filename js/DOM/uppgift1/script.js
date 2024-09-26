@@ -2,9 +2,9 @@ const images = [
     {
     "description": "This is awesome 😉. Ut tempus dolor quis nibh maximus vehicula. Phasellus et varius mi, quis tempor sem. Integer posuere ligula vel lectus cursus hendrerit. Vivamus lacinia interdum ipsum at luctus. Duis et sagittis quam, id mattis lorem. Nunc eget elit tempus, rhoncus arcu eu, cursus ex. Phasellus vitae nibh vitae nisl placerat rhoncus et sit amet orci. Sed euismod ante purus. Aenean neque sem, malesuada a felis at, mattis sagittis risus. Etiam volutpat nibh sapien, a consectetur neque iaculis id. Nullam faucibus rutrum aliquet. Curabitur eget augue metus. Vivamus molestie elit at sapien auctor, eget convallis massa semper. Praesent sem nibh, egestas eu laoreet sed, egestas eu augue.",
     "id": 1233211,
-    // "imageURL": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&h=600&q=80",
+    "imageURL": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&h=600&q=80",
     "likes": 100,
-    "title": "Look at my Code"
+    "title": "Look at my new Code"
     },
     {
     "description": "Now that is something to put your eye 👀 on",
@@ -75,6 +75,10 @@ const images = [
 const containerDiv = document.createElement('div')
 containerDiv.className = "container"
 
+function createComment(e) {
+    console.log('create comment')
+}
+
 images.forEach((item) => {
     const cardDiv = document.createElement('div')
     cardDiv.className = "card"
@@ -89,14 +93,15 @@ images.forEach((item) => {
     //     </div>
     // `
     
-
-    if (item.imageURL) {
-        const img = document.createElement('img')
-        // img.src = item.imageURL
-        img.setAttribute('src', item.imageURL)
-        img.alt = "this is alt"
-        cardDiv.appendChild(img)
-    }
+    // Check if we have imageURL in item
+    // then create the image element
+    // if (item.imageURL) {
+    //     const img = document.createElement('img')
+    //     // img.src = item.imageURL
+    //     img.setAttribute('src', item.imageURL)
+    //     img.alt = "this is alt"
+    //     cardDiv.appendChild(img)
+    // }
 
     const title = document.createElement('h3')
     title.textContent = item.title
@@ -111,7 +116,6 @@ images.forEach((item) => {
     buttonLike.textContent = "Like this"
 
     buttonLike.addEventListener('click', (e) => {
-        console.log(likeCount)
         likeCount += 1
         like.textContent = likeCount
     })
@@ -123,9 +127,33 @@ images.forEach((item) => {
     description.textContent = item.description
 
 
+    const formContainer = document.createElement('div')
+    formContainer.className = 'form-container'
+    
+    const textComment = document.createElement('textarea')
+    const submitTextButton = document.createElement('button')
+    submitTextButton.textContent = "skicka"
+    
+    formContainer.appendChild(textComment)
+    formContainer.appendChild(submitTextButton)
+
+    const comentContainer = document.createElement('div')
+
+    submitTextButton.addEventListener('click', (e) => {
+        // console.log(textComment.value)
+        const comment = textComment.value
+        const text = document.createElement('p')
+        text.textContent = comment
+        comentContainer.appendChild(text)
+        textComment.value = ""
+    })
+
+    formContainer.appendChild(comentContainer)
+
     cardDiv.appendChild(title)
     cardDiv.appendChild(likeContainer)
     cardDiv.appendChild(description)
+    cardDiv.appendChild(formContainer)
     containerDiv.appendChild(cardDiv)
 })
 
