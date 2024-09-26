@@ -95,13 +95,13 @@ images.forEach((item) => {
     
     // Check if we have imageURL in item
     // then create the image element
-    // if (item.imageURL) {
-    //     const img = document.createElement('img')
-    //     // img.src = item.imageURL
-    //     img.setAttribute('src', item.imageURL)
-    //     img.alt = "this is alt"
-    //     cardDiv.appendChild(img)
-    // }
+    if (item.imageURL) {
+        const img = document.createElement('img')
+        // img.src = item.imageURL
+        img.setAttribute('src', item.imageURL)
+        img.alt = "this is alt"
+        cardDiv.appendChild(img)
+    }
 
     const title = document.createElement('h3')
     title.textContent = item.title
