@@ -1,4 +1,4 @@
-// const theFetch = fetch("https://jsonplaceholder.typicode.com/posts")
+// fetch("https://jsonplaceholder.typicode.com/posts")
 //   .then((response) => {
 //     if (!response.ok) {
 //       throw new Error("Något gick fel");
@@ -6,28 +6,22 @@
 //     return response.json();
 //   })
 //   .then((data) => {
-//     // console.log(data)
 //     console.log(data);
 //   })
 //   .catch((error) => {
 //     console.error("Fel:", error);
 //   });
 
-async function fetchData() {
-    try {
-        const response = await fetch("https://jsonplaceholder.typicode.com/posts")
-        const data = await response.json()
-        return data
-    } catch (error) {
-        console.error(error)
-    }
-}
+// async function fetchData() {
+//     try {
+//         const response = await fetch("https://jsonplaceholder.typicode.com/posts")
+//         const data = await response.json()
+//         console.log(data)
+//     } catch (error) {
+//         console.error(error)
+//     }
+// }
 
-function getData () {
-    return fetchData()
-}
-
-console.log(getData())
 
 //   console.log('the fetch', theFetch)
 
